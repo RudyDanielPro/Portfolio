@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@keyframes fill {
+    from { transform: scaleX(0); }
+    to { transform: scaleX(1); }
+}
+
+.animate-fill {
+    transform-origin: left;
+    animation: fill 1s ease-out forwards;
+}
