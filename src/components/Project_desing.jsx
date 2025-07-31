@@ -15,9 +15,9 @@ export function Project_desing() {
         {
             id: 2,
             title: "Medical consultation platform",
-            description: "Dashboard designed to manage and track finances for businesses.",
+            description: "Platform designed with the aim of facilitating the work of medical students and doctors who support the professional development of these individuals..",
             image: "src/assets/Medical consultation platform.png",
-            githubLink: "#",
+            githubLink: "https://github.com/RudyDanielPro/Medical-consultation-platform",
             projectLink: "#"
         },
         {
@@ -25,7 +25,7 @@ export function Project_desing() {
             title: "Portfolio Website",
             description: "This portfolio website showcases the work of a full stack developer in a sleek and modern design.",
             image: "src/assets/Portfolio.png",
-            githubLink: "#",
+            githubLink: "https://github.com/RudyDanielPro/Portfolio",
             projectLink: "#"
         },
         {
@@ -33,7 +33,7 @@ export function Project_desing() {
             title: "Space ship game",
             description: "A desktop minigame developed in Java with Maven as a package manager, aimed at developing the skills of young children on a computer.",
             image: "src/assets/Space ship game.png",
-            githubLink: "#",
+            githubLink: "https://github.com/RudyDanielPro/Space-Ship-Game",
             projectLink: "#"
         },
         {
