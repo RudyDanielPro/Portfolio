@@ -159,18 +159,18 @@ export function ContactMe() {
                 
                 {/* Redes sociales */}
                 <div className="flex gap-5 mt-12">
-                    <a href="#" className="text-gray-400 transition-colors hover:text-emerald-400">
+                    <Link to='https://www.facebook.com/rudydaniel.carballo' className="text-gray-400 transition-colors hover:text-emerald-400">
                         <FaFacebook size={24} />
-                    </a>
-                    <a href="#" className="text-gray-400 transition-colors hover:text-emerald-400">
+                    </Link>
+                    <Link to='https://www.instagram.com/rudydanielcarballo?igsh=dW43eWc1aXRhOWZ1' className="text-gray-400 transition-colors hover:text-emerald-400">
                         <FaInstagram size={24} />
-                    </a>
-                    <a href="#" className="text-gray-400 transition-colors hover:text-emerald-400">
+                    </Link>
+                    <Link to='https://www.linkedin.com/in/rudy-carballo-357239315?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app' className="text-gray-400 transition-colors hover:text-emerald-400">
                         <FaLinkedin size={24} />
-                    </a>
-                    <a href="#" className="text-gray-400 transition-colors hover:text-emerald-400">
+                    </Link>
+                    <Link to='https://t.me/Rudydanielcarballo' className="text-gray-400 transition-colors hover:text-emerald-400">
                         <FaTelegram size={24} />
-                    </a>
+                    </Link>
                 </div>
             </div>
         </section>
