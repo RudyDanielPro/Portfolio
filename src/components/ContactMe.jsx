@@ -64,34 +64,34 @@ export function ContactMe() {
                 
                 <div className="mb-6 text-center md:mb-10">
                     <div className="flex justify-center mb-2 md:mb-3">
-                        <FaPhone className="text-2xl md:text-3xl text-emerald-400" />
+                        <FaPhone className="text-xl md:text-3xl text-emerald-400" />
                     </div>
-                    <h3 className="text-xl font-medium md:text-2xl text-emerald-400">Mobile no</h3>
-                    <p className="mt-1 text-lg font-normal text-white md:mt-2 md:text-2xl">+53 56498546</p>
+                    <h3 className="text-xl font-medium md:text-xl text-emerald-400">Mobile no</h3>
+                    <p className="mt-1 text-base font-normal text-white md:mt-2 md:text-lg">+53 56498546</p>
                 </div>
 
                 <div className="mb-6 text-center md:mb-10">
                     <div className="flex justify-center mb-2 md:mb-3">
-                        <FaMapMarkerAlt className="text-2xl md:text-3xl text-emerald-400" />
+                        <FaMapMarkerAlt className="text-xl md:text-3xl text-emerald-400" />
                     </div>
-                    <h3 className="text-xl font-medium md:text-2xl text-emerald-400">Location</h3>
-                    <p className="mt-1 text-lg font-normal text-white md:mt-2 md:text-2xl">Havana - Cuba</p>
+                    <h3 className="text-xl font-medium md:text-xl text-emerald-400">Location</h3>
+                    <p className="mt-1 text-base font-normal text-white md:mt-2 md:text-lg">Havana - Cuba</p>
                 </div>
 
                 <div className="mb-6 text-center md:mb-10">
                     <div className="flex justify-center mb-2 md:mb-3">
-                        <FaEnvelope className="text-2xl md:text-3xl text-emerald-400" />
+                        <FaEnvelope className="text-xl md:text-3xl text-emerald-400" />
                     </div>
-                    <h3 className="text-xl font-medium md:text-2xl text-emerald-400">Email</h3>
-                    <p className="mt-1 text-lg font-normal text-white md:mt-2 md:text-2xl">rudydanielcarballo@gmail.com</p>
+                    <h3 className="text-xl font-medium md:text-xl text-emerald-400">Email</h3>
+                    <p className="mt-1 text-base font-normal text-white md:mt-2 md:text-lg">rudydanielcarballo@gmail.com</p>
                 </div>
 
                 <div className="mb-6 text-center md:mb-10">
                     <div className="flex justify-center mb-2 md:mb-3">
-                        <FaGlobe className="text-2xl md:text-3xl text-emerald-400" />
+                        <FaGlobe className="text-xl md:text-3xl text-emerald-400" />
                     </div>
-                    <h3 className="text-xl font-medium md:text-2xl text-emerald-400">Website</h3>
-                    <p className="mt-1 text-lg font-normal text-white md:mt-2 md:text-2xl"></p>
+                    <h3 className="text-xl font-medium md:text-xl text-emerald-400">Website</h3>
+                    <p className="mt-1 text-base font-normal text-white md:mt-2 md:text-lg">https://portfolio-n71a.onrender.com</p>
                 </div>
             </div>
 
