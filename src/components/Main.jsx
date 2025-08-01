@@ -99,13 +99,13 @@ export function Main() {
           className="flex flex-col gap-4 mt-6 sm:flex-row md:mt-8"
           variants={fadeIn}
         >
-          <Link to='/about'>
+          <Link to='https://drive.google.com/uc?export=download&id=1iZl0OYtgNKpsy6GIV_ckQ147zmTTNU_I'>
             <motion.button 
               className='px-4 py-2 font-medium text-white transition-all rounded-lg md:px-6 md:py-3 bg-emerald-600 hover:bg-emerald-500'
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              Hire Me
+              Download CV
             </motion.button>
           </Link>
           <Link to='/contact'>
