@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import Paisaje from '../assets/Paisaje.jpg';
 
 export function Main() {
   const fadeIn = {
@@ -141,7 +142,7 @@ export function Main() {
             }}
           />
           <img 
-            src="src/assets/Paisaje.jpg" 
+            src={Paisaje}  
             alt="Landscape image" 
             className="relative w-full h-auto max-h-[70vh] object-cover rounded-lg shadow-2xl border border-emerald-400/10"
           />

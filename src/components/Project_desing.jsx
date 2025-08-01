@@ -1,6 +1,11 @@
 import { useState, useEffect } from 'react';
 import { FiExternalLink, FiGithub } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
+import bibliographicManagerImg from '../assets/Bibliographic Manager.png'
+import medicalPlatformImg from '../assets/Medical consultation platform.png'
+import portfolioImg from '../assets/Portfolio.png'
+import spaceGameImg from '../assets/Space ship game.png'
+import numberConverterImg from '../assets/NumberConverter.png'
 
 export function Project_desing() {
     const projects = [
@@ -8,7 +13,7 @@ export function Project_desing() {
             id: 1,
             title: "Bibliographic Manager",
             description: "Web platform developed to manage bibliographic materials for students.",
-            image: "src/assets/Bibliographic Manager.png",
+            image: bibliographicManagerImg,
             githubLink: "https://github.com/RudyDanielPro/EVB-Entorno-Virtual-Bibliogr-fico",
             projectLink: "https://evb-entorno-virtual-bibliogr-fico.onrender.com/"
         },
@@ -16,7 +21,7 @@ export function Project_desing() {
             id: 2,
             title: "Medical consultation platform",
             description: "Platform designed to facilitate the work of medical students and doctors.",
-            image: "src/assets/Medical consultation platform.png",
+            image: medicalPlatformImg,
             githubLink: "https://github.com/RudyDanielPro/Medical-consultation-platform",
             projectLink: "#"
         },
@@ -24,7 +29,7 @@ export function Project_desing() {
             id: 3,
             title: "Portfolio Website",
             description: "This portfolio website showcases the work of a full stack developer.",
-            image: "src/assets/Portfolio.png",
+            image: portfolioImg,
             githubLink: "https://github.com/RudyDanielPro/Portfolio",
             projectLink: "#"
         },
@@ -32,7 +37,7 @@ export function Project_desing() {
             id: 4,
             title: "Space ship game",
             description: "A desktop minigame developed in Java with Maven as package manager.",
-            image: "src/assets/Space ship game.png",
+            image: spaceGameImg,
             githubLink: "https://github.com/RudyDanielPro/Space-Ship-Game",
             projectLink: "#"
         },
@@ -40,7 +45,7 @@ export function Project_desing() {
             id: 5,
             title: "Number Converter",
             description: "Desktop application developed in Java to perform conversions between number systems.",
-            image: "src/assets/NumberConverter.png",
+            image: numberConverterImg,
             githubLink: "https://github.com/RudyDanielPro/Convertidor",
             projectLink: "#"
         }
