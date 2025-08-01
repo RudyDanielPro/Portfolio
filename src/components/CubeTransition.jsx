@@ -5,17 +5,18 @@ import { useState, useEffect } from "react";
 export function CubeTransition({ children }) {
   const location = useLocation();
   const [prevPath, setPrevPath] = useState(location.pathname);
-  const [direction, setDirection] = useState(1);
+  const [direction, setDirection] = useState(1); // 1 para derecha, -1 para izquierda
 
   useEffect(() => {
+    // Determinar la dirección de la animación comparando las rutas
     const paths = ["/", "/about", "/projects", "/contact"];
     const currentIndex = paths.indexOf(location.pathname);
     const prevIndex = paths.indexOf(prevPath);
 
     if (currentIndex > prevIndex) {
-      setDirection(1);
+      setDirection(1); // Giro a la derecha
     } else if (currentIndex < prevIndex) {
-      setDirection(-1);
+      setDirection(-1); // Giro a la izquierda
     }
 
     setPrevPath(location.pathname);

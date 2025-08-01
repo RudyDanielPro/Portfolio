@@ -3,21 +3,71 @@ import { motion } from "framer-motion";
 
 export function Nav_Var() {
   return (
-    <nav className="fixed top-0 left-0 z-50 flex flex-row items-center justify-center w-full h-full gap-6 p-2 space-x-4 text-white md:flex-col md:w-1/6 md:p-4 md:space-x-0 md:space-y-4 bg-slate-950">
-      <motion.div whileHover={{ scale: 1.05 }}>
-        <Link to="/" className="text-base transition-colors md:text-base hover:text-slate-300">Home</Link>
+    <nav className="fixed top-0 left-0 z-50 flex flex-row items-center justify-around w-full h-16 gap-4 p-4 md:w-1/6 bg-slate-950 md:flex-col md:justify-center md:gap-8 md:h-full">
+      
+      {/* Home Link */}
+      <motion.div 
+        whileHover={{ scale: 1.05 }} 
+        className="flex items-center justify-center w-full h-full md:h-auto"
+      >
+        <Link 
+          to="/" 
+          className="text-sm text-white transition-colors hover:text-emerald-400 md:text-lg md:py-4"
+        >
+          Home
+        </Link>
       </motion.div>
-      <motion.div whileHover={{ scale: 1.05 }}>
-        <Link to="/about" className="text-base transition-colors md:text-base hover:text-slate-300">About Me</Link>
+      
+      {/* About Link */}
+      <motion.div 
+        whileHover={{ scale: 1.05 }} 
+        className="flex items-center justify-center w-full h-full md:h-auto"
+      >
+        <Link 
+          to="/about" 
+          className="text-sm text-white transition-colors hover:text-emerald-400 md:text-lg md:py-4"
+        >
+          About Me
+        </Link>
       </motion.div>
-      <motion.div whileHover={{ scale: 1.05 }}>
-        <Link to="/services" className="text-base transition-colors md:text-base hover:text-slate-300">Services</Link>
+      
+      {/* Services Link */}
+      <motion.div 
+        whileHover={{ scale: 1.05 }} 
+        className="flex items-center justify-center w-full h-full md:h-auto"
+      >
+        <Link 
+          to="/services" 
+          className="text-sm text-white transition-colors hover:text-emerald-400 md:text-lg md:py-4"
+        >
+          Services
+        </Link>
       </motion.div>
-      <motion.div whileHover={{ scale: 1.05 }}>
-        <Link to="/projects" className="text-base transition-colors md:text-base hover:text-slate-300">Projects</Link>
+      
+      {/* Projects Link */}
+      <motion.div 
+        whileHover={{ scale: 1.05 }} 
+        className="flex items-center justify-center w-full h-full md:h-auto"
+      >
+        <Link 
+          to="/projects" 
+          className="text-sm text-white transition-colors hover:text-emerald-400 md:text-lg md:py-4"
+        >
+          Projects
+        </Link>
       </motion.div>
-      <motion.div whileHover={{ scale: 1.05 }}>
-        <Link to="/contact" className="text-base transition-colors md:text-base hover:text-slate-300">Contact</Link>
+      
+      {/* Contact Link */}
+      <motion.div 
+        whileHover={{ scale: 1.05 }} 
+        className="flex items-center justify-center w-full h-full md:h-auto"
+      >
+        <Link 
+          to="/contact" 
+          className="text-sm text-white transition-colors hover:text-emerald-400 md:text-lg md:py-4"
+        >
+          Contact
+        </Link>
       </motion.div>
     </nav>
   );
