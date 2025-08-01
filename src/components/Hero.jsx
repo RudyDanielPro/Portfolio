@@ -8,7 +8,6 @@ export function Hero() {
         { name: "ReactJS", percentage: 100 },
         { name: "Tailwind", percentage: 100 },
         { name: "Java", percentage: 75 },
-        { name: "C++", percentage: 50 },
         {name: "Git&Github", percentage: 100}
     ];
 
@@ -22,7 +21,7 @@ export function Hero() {
                 <p className="mt-4 text-base text-white md:mt-6 md:text-lg">
                     I am a frontend developer with 2 years of experience in developing all kinds of projects,
                     using technologies such as HTML, CSS, JavaScript, Tailwind, and ReactJS. I also have intermediate
-                    knowledge in the programming languages Java and C++, with a strong passion for learning every day
+                    knowledge in the programming language Java , with a strong passion for learning every day
                     and achieving new goals.
                 </p>
             </div>
