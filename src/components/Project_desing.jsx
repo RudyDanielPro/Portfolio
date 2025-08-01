@@ -7,15 +7,15 @@ export function Project_desing() {
         {
             id: 1,
             title: "Bibliographic Manager",
-            description: "Web platform developed with the aim of managing bibliographic materials for the students of that institution.",
+            description: "Web platform developed to manage bibliographic materials for students.",
             image: "src/assets/Bibliographic Manager.png",
             githubLink: "https://github.com/RudyDanielPro/EVB-Entorno-Virtual-Bibliogr-fico",
             projectLink: "https://evb-entorno-virtual-bibliogr-fico.onrender.com/"
         },
-        {
+      {
             id: 2,
             title: "Medical consultation platform",
-            description: "Platform designed with the aim of facilitating the work of medical students and doctors who support the professional development of these individuals..",
+            description: "Platform designed to facilitate the work of medical students and doctors.",
             image: "src/assets/Medical consultation platform.png",
             githubLink: "https://github.com/RudyDanielPro/Medical-consultation-platform",
             projectLink: "#"
@@ -23,7 +23,7 @@ export function Project_desing() {
         {
             id: 3,
             title: "Portfolio Website",
-            description: "This portfolio website showcases the work of a full stack developer in a sleek and modern design.",
+            description: "This portfolio website showcases the work of a full stack developer.",
             image: "src/assets/Portfolio.png",
             githubLink: "https://github.com/RudyDanielPro/Portfolio",
             projectLink: "#"
@@ -31,7 +31,7 @@ export function Project_desing() {
         {
             id: 4,
             title: "Space ship game",
-            description: "A desktop minigame developed in Java with Maven as a package manager, aimed at developing the skills of young children on a computer.",
+            description: "A desktop minigame developed in Java with Maven as package manager.",
             image: "src/assets/Space ship game.png",
             githubLink: "https://github.com/RudyDanielPro/Space-Ship-Game",
             projectLink: "#"
@@ -39,7 +39,7 @@ export function Project_desing() {
         {
             id: 5,
             title: "Number Converter",
-            description: "Desktop application developed in Java with the aim of performing conversions between binary, decimal, and hexadecimal numbers.",
+            description: "Desktop application developed in Java to perform conversions between number systems.",
             image: "src/assets/NumberConverter.png",
             githubLink: "https://github.com/RudyDanielPro/Convertidor",
             projectLink: "#"
@@ -49,13 +49,12 @@ export function Project_desing() {
     const [currentProject, setCurrentProject] = useState(0);
     const [isPaused, setIsPaused] = useState(false);
 
-    
     useEffect(() => {
         const interval = setInterval(() => {
             if (!isPaused) {
                 setCurrentProject((prev) => (prev + 1) % projects.length);
             }
-        }, 2000);
+        }, 5000);
 
         return () => clearInterval(interval);
     }, [projects.length, isPaused]);
@@ -70,67 +69,70 @@ export function Project_desing() {
 
     return (
         <section 
-            className="flex flex-col items-start w-full h-screen bg-gray-800 pl-[16.666%] pr-[5%] pt-[2%] ml-10"
+            className="flex flex-col items-center w-full min-h-screen px-4 pb-8 bg-gray-800 pt-28 md:pt-16"
             onMouseEnter={() => setIsPaused(true)}
             onMouseLeave={() => setIsPaused(false)}
         >
-            <h1 className="mb-8 text-3xl font-bold text-emerald-400 md:text-5xl">Projects</h1>
+            {/* Título con margen superior para móviles */}
+            <h1 className="sticky z-10 w-full py-4 mb-6 text-3xl font-bold text-center bg-gray-800 text-emerald-400 top-16 md:static md:py-0 md:bg-transparent">
+                Projects
+            </h1>
             
-            <div className="relative w-full h-3/4">
-                {/* Contenedor del proyecto actual */}
-                <div 
-                    className="flex flex-col items-center h-full overflow-hidden transition-all duration-300 bg-slate-950 hover:bg-emerald-900 rounded-xl group"
-                    key={projects[currentProject].id}
-                >
-                    <div className="relative w-full overflow-hidden h-3/4">
-                        <img 
-                            src={projects[currentProject].image} 
-                            alt={`Imagen del proyecto ${projects[currentProject].title}`} 
-                            className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
-                        />
-                        
-                        {/* Botones superpuestos centrados */}
-                        <div className="absolute inset-0 flex items-center justify-center gap-4 transition-opacity duration-300 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100">
-                            <Link 
-                                to={projects[currentProject].projectLink}
-                                className="flex items-center px-6 py-3 font-medium text-white transition-colors rounded-lg bg-emerald-500 hover:bg-emerald-600"
-                            >
-                                <FiExternalLink className="mr-2" />
-                                View Project
-                            </Link>
-                            <Link 
-                                to={projects[currentProject].githubLink}
-                                className="flex items-center px-6 py-3 font-medium text-white transition-colors bg-gray-800 rounded-lg hover:bg-gray-700"
-                            >
-                                <FiGithub className="mr-2" />
-                                GitHub
-                            </Link>
+            <div className="relative flex flex-col items-center justify-center flex-1 w-full max-w-4xl">
+                {/* Tarjeta del proyecto */}
+                <div className="w-full max-w-2xl">
+                    <div 
+                        className="flex flex-col overflow-hidden transition-all duration-300 bg-slate-950 rounded-xl group"
+                        key={projects[currentProject].id}
+                    >
+                        <div className="relative w-full overflow-hidden aspect-video">
+                            <img 
+                                src={projects[currentProject].image} 
+                                alt={`Project ${projects[currentProject].title}`} 
+                                className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
+                            />
+                            
+                            <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 transition-opacity duration-300 bg-black bg-opacity-50 opacity-0 sm:flex-row sm:gap-6 group-hover:opacity-100">
+                                <Link 
+                                    to={projects[currentProject].projectLink}
+                                    className="flex items-center px-4 py-2 text-sm font-medium text-white transition-colors rounded-lg sm:text-base bg-emerald-500 hover:bg-emerald-600"
+                                >
+                                    <FiExternalLink className="mr-2" />
+                                    View Project
+                                </Link>
+                                <Link 
+                                    to={projects[currentProject].githubLink}
+                                    className="flex items-center px-4 py-2 text-sm font-medium text-white transition-colors bg-gray-800 rounded-lg sm:text-base hover:bg-gray-700"
+                                >
+                                    <FiGithub className="mr-2" />
+                                    GitHub
+                                </Link>
+                            </div>
                         </div>
-                    </div>
-                    
-                    {/* Texto centrado debajo de la imagen */}
-                    <div className="w-full p-4 text-center">
-                        <h2 className="text-xl font-bold text-white">{projects[currentProject].title}</h2>
-                        <p className="max-w-md m-3 mx-auto text-white">{projects[currentProject].description}</p>
+                        
+                        <div className="p-6 text-center">
+                            <h2 className="mb-2 text-xl font-bold text-white">{projects[currentProject].title}</h2>
+                            <p className="text-gray-300">{projects[currentProject].description}</p>
+                        </div>
                     </div>
                 </div>
 
                 {/* Controles de navegación */}
                 <button 
                     onClick={goToPrev}
-                    className="absolute left-0 p-2 text-white transform -translate-x-10 -translate-y-1/2 bg-black bg-opacity-50 rounded-full top-1/2 hover:bg-opacity-75"
+                    className="absolute left-0 p-2 text-white transform -translate-x-4 -translate-y-1/2 bg-black bg-opacity-50 rounded-full top-1/2 hover:bg-opacity-75 md:-translate-x-6"
                 >
                     &lt;
                 </button>
                 <button 
                     onClick={goToNext}
-                    className="absolute right-0 p-2 text-white transform translate-x-10 -translate-y-1/2 bg-black bg-opacity-50 rounded-full top-1/2 hover:bg-opacity-75"
+                    className="absolute right-0 p-2 text-white transform translate-x-4 -translate-y-1/2 bg-black bg-opacity-50 rounded-full top-1/2 hover:bg-opacity-75 md:translate-x-6"
                 >
                     &gt;
                 </button>
 
-                {/* Indicadores */}
-                <div className="absolute flex space-x-2 transform -translate-x-1/2 bottom-4 left-1/2">
+                {/* Indicadores de posición */}
+                <div className="flex justify-center w-full gap-2 mt-6">
                     {projects.map((_, index) => (
                         <button
                             key={index}
