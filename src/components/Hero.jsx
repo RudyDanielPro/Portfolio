@@ -39,9 +39,9 @@ export function Hero() {
                     </h3>
 
                     <div className="flex flex-col gap-4 mt-8 sm:flex-row md:mt-36">
-                        <Link to='/about'>
+                        <Link to='https://drive.google.com/uc?export=download&id=1iZl0OYtgNKpsy6GIV_ckQ147zmTTNU_I'>
                             <button className="px-4 py-2 font-medium text-white transition-colors rounded-lg md:px-6 md:py-3 bg-emerald-500 hover:bg-emerald-600">
-                                Hire Me
+                                Download CV
                             </button>
                         </Link>
                         <Link to='/contact'>
