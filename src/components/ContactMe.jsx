@@ -21,23 +21,23 @@ export function ContactMe() {
             form.current,
             '3KHFIYuUSG3iRVKum'
         )
-        .then((result) => {
-            console.log(result.text);
-            setAlertType('success');
-            setAlertMessage('Message sent successfully! I will contact you soon.');
-            form.current.reset();
-        }, (error) => {
-            console.log(error.text);
-            setAlertType('error');
-            setAlertMessage('Error sending message. Please try again later.');
-        })
-        .finally(() => {
-            setIsSending(false);
-            setShowAlert(true);
-            setTimeout(() => {
-                setShowAlert(false);
-            }, 5000);
-        });
+            .then((result) => {
+                console.log(result.text);
+                setAlertType('success');
+                setAlertMessage('Message sent successfully! I will contact you soon.');
+                form.current.reset();
+            }, (error) => {
+                console.log(error.text);
+                setAlertType('error');
+                setAlertMessage('Error sending message. Please try again later.');
+            })
+            .finally(() => {
+                setIsSending(false);
+                setShowAlert(true);
+                setTimeout(() => {
+                    setShowAlert(false);
+                }, 5000);
+            });
     };
 
     return (
@@ -50,7 +50,7 @@ export function ContactMe() {
                         <FaTimesCircle className="mr-3 text-2xl text-white" />
                     )}
                     <span className="font-medium text-white">{alertMessage}</span>
-                    <button 
+                    <button
                         onClick={() => setShowAlert(false)}
                         className="ml-4 text-white hover:text-gray-200"
                     >
@@ -61,7 +61,7 @@ export function ContactMe() {
 
             <div className="w-full h-auto gap-5 mb-8 md:w-1/2 md:mb-0 md:pr-4">
                 <h1 className="mb-6 text-2xl font-bold text-center md:mb-8 md:text-3xl text-emerald-400">Contact Me</h1>
-                
+
                 <div className="grid grid-cols-2 gap-4 mb-6 md:hidden">
                     {/* Columna 1 - Teléfono y Email */}
                     <div className="px-2 text-center">
@@ -121,7 +121,14 @@ export function ContactMe() {
                             <FaEnvelope className="text-2xl text-emerald-400" />
                         </div>
                         <h3 className="text-xl font-medium text-emerald-400">Email</h3>
-                        <p className="mt-1 text-lg font-normal text-white">rudydanielcarballo@gmail.com</p>
+                        <a
+                            href="https://mail.google.com/mail/?authuser=rudydanielcarballo@gmail.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="mt-1 text-lg font-normal text-white hover:text-blue-500"
+                        >
+                            rudydanielcarballo@gmail.com
+                        </a>
                     </div>
 
                     <div className="mb-6 text-center md:mb-8">
@@ -129,20 +136,26 @@ export function ContactMe() {
                             <FaGlobe className="text-2xl text-emerald-400" />
                         </div>
                         <h3 className="text-xl font-medium text-emerald-400">Website</h3>
-                        <p className="mt-1 text-lg font-normal text-white">https://portfolio-n71a.onrender.com</p>
+                        <a
+                            href="https://portfolio-n71a.onrender.com"
+                            rel="noopener noreferrer"
+                            className="mt-1 text-lg font-normal text-white hover:text-blue-500"
+                        >
+                            https://portfolio-n71a.onrender.com
+                        </a>
                     </div>
                 </div>
             </div>
 
             <div className="w-full px-2 md:w-1/2 md:pr-8">
                 <h2 className="mb-6 text-2xl font-bold md:mb-8 md:text-3xl text-emerald-400">Send me a message</h2>
-                
+
                 <form ref={form} onSubmit={sendEmail}>
                     <div className="flex flex-col gap-4 mb-4 md:flex-row md:gap-6 md:mb-6">
                         <div className="w-full md:w-1/2">
                             <label className="block mb-1 text-base text-white md:mb-2 md:text-lg">Name</label>
-                            <input 
-                                type="text" 
+                            <input
+                                type="text"
                                 name="user_name"
                                 className="w-full p-2 text-sm text-white bg-gray-700 border border-gray-600 rounded-lg md:p-3 md:text-base focus:outline-none focus:border-emerald-400"
                                 placeholder="Your name"
@@ -151,8 +164,8 @@ export function ContactMe() {
                         </div>
                         <div className="w-full md:w-1/2">
                             <label className="block mb-1 text-base text-white md:mb-2 md:text-lg">Email</label>
-                            <input 
-                                type="email" 
+                            <input
+                                type="email"
                                 name="user_email"
                                 className="w-full p-2 text-sm text-white bg-gray-700 border border-gray-600 rounded-lg md:p-3 md:text-base focus:outline-none focus:border-emerald-400"
                                 placeholder="Your email"
@@ -160,9 +173,9 @@ export function ContactMe() {
                             />
                         </div>
                     </div>
-                    
+
                     <div className="mb-4">
-                        <textarea 
+                        <textarea
                             rows="6"
                             name="message"
                             className="w-full p-2 text-sm text-white bg-gray-700 border border-gray-600 rounded-lg md:p-3 md:text-base focus:outline-none focus:border-emerald-400"
@@ -170,8 +183,8 @@ export function ContactMe() {
                             required
                         ></textarea>
                     </div>
-                    
-                    <button 
+
+                    <button
                         type="submit"
                         disabled={isSending}
                         className="flex items-center justify-center w-full gap-2 px-4 py-2 text-sm font-medium text-gray-800 transition-colors rounded-lg md:px-6 md:py-3 md:text-base bg-emerald-400 hover:bg-emerald-300 disabled:bg-gray-500 md:w-auto"
@@ -192,7 +205,7 @@ export function ContactMe() {
                         )}
                     </button>
                 </form>
-                
+
                 <div className="flex justify-center gap-4 mt-8 md:justify-start md:gap-5 md:mt-10">
                     <Link to='https://www.facebook.com/rudydaniel.carballo' className="text-gray-400 transition-colors hover:text-emerald-400">
                         <FaFacebook size={20} />
