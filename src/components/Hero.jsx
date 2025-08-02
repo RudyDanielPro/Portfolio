@@ -2,13 +2,13 @@ import { Link } from "react-router-dom";
 
 export function Hero() {
     const technologies = [
-        { name: "HTML", percentage: 100 },
-        { name: "CSS", percentage: 100 },
-        { name: "JavaScript", percentage: 100 },
-        { name: "ReactJS", percentage: 100 },
-        { name: "Tailwind", percentage: 100 },
-        { name: "Java", percentage: 75 },
-        {name: "Git&Github", percentage: 100}
+        "HTML",
+        "CSS", 
+        "JavaScript",
+        "ReactJS",
+        "Tailwind",
+        "Java",
+        "Git & Github"
     ];
 
     return (
@@ -21,7 +21,7 @@ export function Hero() {
                 <p className="mt-4 text-base text-white md:mt-6 md:text-lg">
                     I am a frontend developer with 2 years of experience in developing all kinds of projects,
                     using technologies such as HTML, CSS, JavaScript, Tailwind, and ReactJS. I also have intermediate
-                    knowledge in the programming language Java , with a strong passion for learning every day
+                    knowledge in the programming language Java, with a strong passion for learning every day
                     and achieving new goals.
                 </p>
             </div>
@@ -65,21 +65,13 @@ export function Hero() {
                 </section>
 
                 <section className="flex-1 mr-0 md:mr-5">
-                    <div className="mt-4 space-y-4">
+                    <h3 className="pb-2 text-lg font-medium border-b border-gray-600 md:text-xl text-emerald-400">
+                        Technologies:
+                    </h3>
+                    <div className="mt-4 space-y-3">
                         {technologies.map((tech, index) => (
-                            <div key={index}>
-                                <div className="flex justify-between text-white">
-                                    <span className="text-sm md:text-base">{tech.name}</span>
-                                </div>
-                                <div className="w-full h-2 mt-1 overflow-hidden bg-gray-600 rounded-full">
-                                    <div
-                                        className="h-full rounded-full bg-emerald-400 animate-fill"
-                                        style={{ 
-                                            width: `${tech.percentage}%`,
-                                            animationDelay: `${index * 0.15}s`
-                                        }}
-                                    ></div>
-                                </div>
+                            <div key={index} className="text-sm text-white md:text-base">
+                                • {tech}
                             </div>
                         ))}
                     </div>

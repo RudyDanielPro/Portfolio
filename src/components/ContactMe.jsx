@@ -41,7 +41,7 @@ export function ContactMe() {
     };
 
     return (
-        <section className="flex flex-col md:flex-row items-start w-full min-h-screen bg-gray-800 px-4 md:pl-[16.666%] md:pr-[5%] pt-24 md:pt-[2%] ml-0 md:ml-10 pb-12 relative">
+        <section className="flex flex-col md:flex-row items-start w-full min-h-screen bg-gray-800 px-4 md:pl-[8%] md:pr-[5%] pt-24 ml-0 md:ml-0 pb-12 relative">
             {showAlert && (
                 <div className={`fixed top-5 right-5 z-50 flex items-center p-4 rounded-lg shadow-lg transform transition-all duration-300 ${alertType === 'success' ? 'bg-emerald-500' : 'bg-red-500'}`}>
                     {alertType === 'success' ? (
