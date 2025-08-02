@@ -12,7 +12,7 @@ export function Hero() {
     ];
 
     return (
-        <section className="flex flex-col items-start w-full min-h-screen bg-gray-800 pl-4 md:pl-[16.666%] pr-4 md:pr-[5%] pt-24 md:pt-[2%] ml-0 md:ml-10">
+        <section className="flex flex-col items-start w-full min-h-screen bg-gray-800 pl-4 md:pl-[16.666%] pr-4 md:pr-[5%] pt-24 md:pt-[2%] ml-0 md:ml-10 pb-12">
             <div className="flex flex-col w-full">
                 <h1 className="mb-4 text-2xl font-bold md:text-3xl text-emerald-400">About Me</h1>
                 <h2 className="mt-4 text-xl font-semibold text-white md:text-2xl">

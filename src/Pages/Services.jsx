@@ -12,7 +12,7 @@ export function Services() {
     return (
         <>
             <Nav_Var />
-            <section className="flex flex-col items-start w-full min-h-screen bg-gray-800 pl-4 md:pl-[16.666%] pr-4 md:pr-[5%] pt-24 md:pt-[4%] ml-0 md:ml-10">
+            <section className="flex flex-col items-start w-full min-h-screen bg-gray-800 pl-4 md:pl-[16.666%] pr-4 md:pr-[5%] pt-24 md:pt-[4%] ml-0 md:ml-10 pb-12">
                 <h1 className="mb-6 text-2xl font-bold md:mb-8 md:text-3xl text-emerald-400">Services</h1>
                 
                 <div className="flex flex-col flex-wrap w-full gap-4 md:flex-row">
