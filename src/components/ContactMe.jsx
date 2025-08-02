@@ -122,7 +122,7 @@ export function ContactMe() {
                         </div>
                         <h3 className="text-xl font-medium text-emerald-400">Email</h3>
                         <a
-                            href="https://mail.google.com/mail/?authuser=rudydanielcarballo@gmail.com"
+                            href="https://mail.google.com/mail/?view=cm&fs=1&to=rudydanielcarballo@gmail.com"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="mt-1 text-lg font-normal text-white hover:text-blue-500"
