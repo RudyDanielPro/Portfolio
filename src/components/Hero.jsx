@@ -1,24 +1,26 @@
-import { Link } from "react-router-dom";
+import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaGitAlt, FaGithub } from "react-icons/fa";
+import { SiTailwindcss } from "react-icons/si";
+import { DiJava } from "react-icons/di";
 
 export function Hero() {
     const technologies = [
-        "HTML",
-        "CSS", 
-        "JavaScript",
-        "ReactJS",
-        "Tailwind",
-        "Java",
-        "Git & Github"
+        { name: "HTML", icon: <FaHtml5 className="inline mr-2 text-2xl text-orange-500" /> },
+        { name: "CSS", icon: <FaCss3Alt className="inline mr-2 text-2xl text-blue-500" /> },
+        { name: "JavaScript", icon: <FaJs className="inline mr-2 text-2xl text-yellow-400" /> },
+        { name: "ReactJS", icon: <FaReact className="inline mr-2 text-2xl text-blue-400" /> },
+        { name: "Tailwind", icon: <SiTailwindcss className="inline mr-2 text-2xl text-cyan-400" /> },
+        { name: "Java", icon: <DiJava className="inline mr-2 text-2xl text-red-500" /> },
+        { name: "Git & Github", icon: <><FaGitAlt className="inline mr-1 text-2xl text-orange-600" /><FaGithub className="inline mr-2 text-2xl text-gray-800" /></> }
     ];
 
     return (
-        <section className="flex flex-col items-start w-full min-h-screen bg-gray-800 pl-4 md:pl-[16.666%] pr-4 md:pr-[5%] pt-24 md:pt-[2%] ml-0 md:ml-10 pb-12">
+        <section className="flex flex-col items-start w-full min-h-max">
             <div className="flex flex-col w-full">
-                <h1 className="mb-4 text-2xl font-bold md:text-3xl text-emerald-400">About Me</h1>
-                <h2 className="mt-4 text-xl font-semibold text-white md:text-2xl">
+                <h1 className="mb-4 text-3xl font-bold md:text-4xl text-emerald-400">About Me</h1>
+                <h2 className="text-2xl font-semibold text-white md:text-3xl">
                     I'm Rudy, <span className="text-emerald-400">A Frontend Developer</span>
                 </h2>
-                <p className="mt-4 text-base text-white md:mt-6 md:text-lg">
+                <p className="mt-4 text-lg text-white md:mt-5 md:text-xl lg:text-2xl">
                     I am a frontend developer with 2 years of experience in developing all kinds of projects,
                     using technologies such as HTML, CSS, JavaScript, Tailwind, and ReactJS. I also have intermediate
                     knowledge in the programming language Java, with a strong passion for learning every day
@@ -26,52 +28,39 @@ export function Hero() {
                 </p>
             </div>
 
-            <div className="flex flex-col w-full gap-4 mt-8 md:flex-row md:gap-6 md:mt-12">
-                <section className="flex-1 mb-6 mr-0 md:mr-5 md:mb-0">
-                    <h3 className="pb-2 text-lg font-medium border-b border-gray-600 md:text-xl text-emerald-400">
+            <div className="flex flex-col w-full gap-5 mt-8 md:flex-row md:gap-8 md:mt-10">
+                <section className="flex-1 mb-5 mr-0 md:mr-6 md:mb-0">
+                    <h3 className="pb-3 text-xl font-medium border-b border-gray-600 md:text-2xl text-emerald-400">
                         Experience: <span className="font-normal text-white">2+ years</span>
                     </h3>
-                    <h3 className="pb-2 mt-4 text-lg font-medium border-b border-gray-600 md:text-xl text-emerald-400">
+                    <h3 className="pb-3 mt-4 text-xl font-medium border-b border-gray-600 md:text-2xl text-emerald-400">
                         Availability: <span className="font-normal text-white">Part-time</span>
                     </h3>
-                    <h3 className="pb-2 mt-4 text-lg font-medium border-b border-gray-600 md:text-xl text-emerald-400">
+                    <h3 className="pb-3 mt-4 text-xl font-medium border-b border-gray-600 md:text-2xl text-emerald-400">
                         Age: <span className="font-normal text-white">20</span>
                     </h3>
-
-                    <div className="flex flex-col gap-4 mt-8 sm:flex-row md:mt-36">
-                        <Link to='https://drive.google.com/uc?export=download&id=1iZl0OYtgNKpsy6GIV_ckQ147zmTTNU_I'>
-                            <button className="px-4 py-2 font-medium text-white transition-colors rounded-lg md:px-6 md:py-3 bg-emerald-500 hover:bg-emerald-600">
-                                Download CV
-                            </button>
-                        </Link>
-                        <Link to='/contact'>
-                            <button className="px-4 py-2 font-medium text-white transition-colors rounded-lg md:px-6 md:py-3 bg-emerald-500 hover:bg-emerald-600">
-                                Contact
-                            </button>
-                        </Link>
-                    </div>
                 </section>
 
-                <section className="flex-1 mb-6 mr-0 md:mr-5 md:mb-0">
-                    <h3 className="pb-2 text-lg font-medium border-b border-gray-600 md:text-xl text-emerald-400">
+                <section className="flex-1 mb-5 mr-0 md:mr-6 md:mb-0">
+                    <h3 className="pb-3 text-xl font-medium border-b border-gray-600 md:text-2xl text-emerald-400">
                         Language used: <span className="font-normal text-white">JavaScript</span>
                     </h3>
-                    <h3 className="pb-2 mt-4 text-lg font-medium border-b border-gray-600 md:text-xl text-emerald-400">
+                    <h3 className="pb-3 mt-4 text-xl font-medium border-b border-gray-600 md:text-2xl text-emerald-400">
                         Country: <span className="font-normal text-white">Cuba</span>
                     </h3>
-                    <h3 className="pb-2 mt-4 text-lg font-medium border-b border-gray-600 md:text-xl text-emerald-400">
+                    <h3 className="pb-3 mt-4 text-xl font-medium border-b border-gray-600 md:text-2xl text-emerald-400">
                         Phone: <span className="font-normal text-white">+53 56498546</span>
                     </h3>
                 </section>
 
-                <section className="flex-1 mr-0 md:mr-5">
-                    <h3 className="pb-2 text-lg font-medium border-b border-gray-600 md:text-xl text-emerald-400">
+                <section className="flex-1 mr-0 md:mr-6">
+                    <h3 className="pb-3 text-xl font-medium border-b border-gray-600 md:text-2xl text-emerald-400">
                         Technologies:
                     </h3>
                     <div className="mt-4 space-y-3">
                         {technologies.map((tech, index) => (
-                            <div key={index} className="text-sm text-white md:text-base">
-                                • {tech}
+                            <div key={index} className="text-base text-white md:text-lg lg:text-xl">
+                                {tech.icon} {tech.name}
                             </div>
                         ))}
                     </div>

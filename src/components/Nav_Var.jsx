@@ -1,74 +1,135 @@
-// Nav_Var.js - Versión modificada
-import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { FaGlobe, FaBars, FaTimes } from 'react-icons/fa';
+import { useState, useEffect } from "react";
 
 export function Nav_Var() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+    setIsMenuOpen(false);
+  };
+
   return (
-    <nav className="fixed top-0 left-0 z-50 flex flex-row items-center justify-around w-full h-16 gap-2 p-2 text-sm md:text-lg lg:text-xl md:w-1/6 bg-slate-950 md:flex-col md:justify-center md:gap-6 md:h-full md:p-4">
-      {/* Home Link */}
-      <motion.div 
-        whileHover={{ scale: 1.05 }} 
-        className="flex items-center justify-center w-full h-full md:h-auto"
+    <nav className={`sticky top-0 z-50 flex flex-row items-center justify-between transition-all duration-300 w-full py-3 px-4 ${
+      isScrolled ? 'backdrop-blur-md' : 'backdrop-blur-sm'
+    }`}>
+      {/* Logo/Brand */}
+      <div 
+        className="flex flex-row items-center gap-3 text-2xl font-bold text-white cursor-pointer hover:text-emerald-400 md:text-3xl"
+        onClick={() => scrollToSection('home')}
       >
-        <Link 
-          to="/" 
-          className="text-white transition-colors hover:text-emerald-400 md:py-2"
-        >
-          Home
-        </Link>
-      </motion.div>
+        <FaGlobe className="text-3xl text-emerald-400" />
+        <span className="hidden sm:inline">Web Developer Portfolio</span>
+        <span className="sm:hidden">Portfolio</span>
+      </div>
       
-      {/* About Link */}
-      <motion.div 
-        whileHover={{ scale: 1.05 }} 
-        className="flex items-center justify-center w-full h-full md:h-auto"
+      {/* Desktop Menu Items */}
+      <div className="items-center justify-end flex-1 hidden gap-8 md:flex lg:gap-10">            
+        <motion.div whileHover={{ scale: 1.05 }}>
+          <div 
+            className="py-2 text-xl text-white transition-colors cursor-pointer hover:text-emerald-400 whitespace-nowrap lg:text-2xl"
+            onClick={() => scrollToSection('about')}
+          >
+            About
+          </div>
+        </motion.div>
+                
+        <motion.div whileHover={{ scale: 1.05 }}>
+          <div 
+            className="py-2 text-xl text-white transition-colors cursor-pointer hover:text-emerald-400 lg:text-2xl"
+            onClick={() => scrollToSection('skills')}
+          >
+            Skills
+          </div>
+        </motion.div>
+        
+        <motion.div whileHover={{ scale: 1.05 }}>
+          <div 
+            className="py-2 text-xl text-white transition-colors cursor-pointer hover:text-emerald-400 lg:text-2xl"
+            onClick={() => scrollToSection('projects')}
+          >
+            Projects
+          </div>
+        </motion.div>
+        
+        <motion.div whileHover={{ scale: 1.05 }}>
+          <div 
+            className="py-2 text-xl text-white transition-colors cursor-pointer hover:text-emerald-400 lg:text-2xl"
+            onClick={() => scrollToSection('contact')}
+          >
+            Contact
+          </div>
+        </motion.div>
+      </div>
+
+      {/* Mobile Menu Button */}
+      <button 
+        className="z-50 text-white md:hidden focus:outline-none"
+        onClick={toggleMenu}
+        aria-label="Toggle menu"
       >
-        <Link 
-          to="/about" 
-          className="text-white transition-colors hover:text-emerald-400 md:py-2 whitespace-nowrap"
+        {isMenuOpen ? <FaTimes size={28} /> : <FaBars size={28} />}
+      </button>
+
+      {/* Mobile Menu Overlay */}
+      {isMenuOpen && (
+        <div className="fixed inset-0 z-40 bg-black/50 md:hidden" onClick={toggleMenu} />
+      )}
+
+      {/* Mobile Menu */}
+      {isMenuOpen && (
+        <motion.div 
+          className="fixed left-0 z-50 w-screen border-t shadow-lg top-full bg-slate-900 border-slate-700/50 md:hidden"
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -10 }}
+          transition={{ duration: 0.2 }}
         >
-          About Me
-        </Link>
-      </motion.div>
-      
-      {/* Services Link */}
-      <motion.div 
-        whileHover={{ scale: 1.05 }} 
-        className="flex items-center justify-center w-full h-full md:h-auto"
-      >
-        <Link 
-          to="/services" 
-          className="text-white transition-colors hover:text-emerald-400 md:py-2"
-        >
-          Services
-        </Link>
-      </motion.div>
-      
-      {/* Projects Link */}
-      <motion.div 
-        whileHover={{ scale: 1.05 }} 
-        className="flex items-center justify-center w-full h-full md:h-auto"
-      >
-        <Link 
-          to="/projects" 
-          className="text-white transition-colors hover:text-emerald-400 md:py-2"
-        >
-          Projects
-        </Link>
-      </motion.div>
-      
-      {/* Contact Link */}
-      <motion.div 
-        whileHover={{ scale: 1.05 }} 
-        className="flex items-center justify-center w-full h-full md:h-auto"
-      >
-        <Link 
-          to="/contact" 
-          className="text-white transition-colors hover:text-emerald-400 md:py-2"
-        >
-          Contact
-        </Link>
-      </motion.div>
+          <div className="flex flex-col items-center py-6 space-y-6">
+            <div 
+              className="px-4 py-2 text-xl font-medium text-white transition-colors cursor-pointer hover:text-emerald-400" 
+              onClick={() => scrollToSection('about')}
+            >
+              About
+            </div>
+            <div 
+              className="px-4 py-2 text-xl font-medium text-white transition-colors cursor-pointer hover:text-emerald-400" 
+              onClick={() => scrollToSection('skills')}
+            >
+              Skills
+            </div>
+            <div 
+              className="px-4 py-2 text-xl font-medium text-white transition-colors cursor-pointer hover:text-emerald-400" 
+              onClick={() => scrollToSection('projects')}
+            >
+              Projects
+            </div>
+            <div 
+              className="px-4 py-2 text-xl font-medium text-white transition-colors cursor-pointer hover:text-emerald-400" 
+              onClick={() => scrollToSection('contact')}
+            >
+              Contact
+            </div>
+          </div>
+        </motion.div>
+      )}
     </nav>
   );
 }

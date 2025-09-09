@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import Paisaje from '../assets/Paisaje.jpg';
 import { Link } from "react-router-dom";
+import video from "../assets/Foto.mp4";
 
 export function Main() {
   const fadeIn = {
@@ -59,62 +59,28 @@ export function Main() {
   }, [displayedText, isTyping, currentTextIndex]);
 
   return (
-    
-    <main className='relative flex flex-col md:flex-row items-center w-full min-h-screen pl-4 md:pl-[16.666%] pt-20 md:pt-0 overflow-hidden'>
-      {/* Fondo animado mejorado */}
-      <div className="absolute inset-0 z-0 overflow-hidden">
-        <motion.div
-          className="absolute inset-0 opacity-100"
-          animate={{
-            background: [
-              'linear-gradient(135deg, #1F2937 0%, #065F46 50%, #111827 100%)',
-              'linear-gradient(135deg, #065F46 0%, #1F2937 50%, #047857 100%)',
-              'linear-gradient(135deg, #1F2937 0%, #047857 50%, #065F46 100%)',
-              'linear-gradient(135deg, #047857 0%, #065F46 50%, #1F2937 100%)',
-            ],
-          }}
-          transition={{
-            duration: 8, // Más rápido que antes (15s → 8s)
-            repeat: Infinity,
-            repeatType: "reverse",
-            ease: "linear",
-          }}
-        />
-        <motion.div 
-          className="absolute inset-0 bg-gradient-to-br from-gray-900/70 via-gray-800/50 to-emerald-900/30"
-          animate={{
-            opacity: [0.7, 0.9, 0.7],
-          }}
-          transition={{
-            duration: 6,
-            repeat: Infinity,
-            repeatType: "reverse",
-          }}
-        />
-        <div className="absolute inset-0 bg-gray-900/30 backdrop-blur-[2px]" />
-      </div>
-
+    <main className='relative flex flex-col items-center w-full mt-10 min-h-max md:flex-row'>
       <motion.section 
-        className='relative z-10 w-full px-4 md:w-2/3 md:px-8'
+        className='relative z-10 w-full md:w-2/3'
         initial="hidden"
         animate="visible"
         variants={staggerContainer}
       >
         <motion.div variants={fadeIn}>
-          <h1 className='text-3xl font-bold text-white md:text-4xl'>
+          <h1 className='text-4xl font-bold text-white sm:text-5xl md:text-6xl lg:text-7xl'> 
             Hi, I'm 
           </h1>
         </motion.div>
         
         <motion.div variants={fadeIn}>
-          <h2 className='mt-3 text-xl text-gray-300 md:text-2xl'>
+          <h2 className='mt-4 text-3xl text-gray-300 sm:text-4xl md:text-5xl lg:text-6xl'>
             {" "}
             <span className='text-emerald-400'>
               {displayedText}
               <motion.span 
                 animate={{ opacity: [0, 1, 0] }}
                 transition={{ duration: 0.8, repeat: Infinity }}
-                className="inline-block ml-0.5"
+                className="inline-block ml-1"
               >
                 |
               </motion.span>
@@ -123,7 +89,7 @@ export function Main() {
         </motion.div>
         
         <motion.p 
-          className="mt-4 text-base leading-relaxed text-gray-300 md:mt-6 md:text-lg"
+          className="mt-6 text-lg leading-relaxed text-gray-300 md:mt-8 md:text-xl lg:text-2xl"
           variants={fadeIn}
         >
           Crafting exceptional digital experiences with modern web technologies.
@@ -132,12 +98,12 @@ export function Main() {
         </motion.p>
         
         <motion.div 
-          className="flex flex-row gap-4 mt-6 md:mt-8"
+          className="flex flex-row gap-4 mt-8 md:mt-10"
           variants={fadeIn}
         >
           <Link to='https://drive.google.com/uc?export=download&id=1iZl0OYtgNKpsy6GIV_ckQ147zmTTNU_I'>
             <motion.button 
-              className='px-4 py-2 font-medium text-white transition-all rounded-lg md:px-6 md:py-3 bg-emerald-600 hover:bg-emerald-500'
+              className='px-5 py-2 text-lg font-medium text-white transition-all rounded-lg sm:px-6 sm:py-3 sm:text-xl md:px-8 md:py-4 md:text-2xl bg-emerald-600 hover:bg-emerald-500' 
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -146,7 +112,7 @@ export function Main() {
           </Link>
           <Link to='/contact'>
             <motion.button 
-              className='px-4 py-2 font-medium text-white transition-all rounded-lg md:px-6 md:py-3 bg-emerald-600 hover:bg-emerald-500'
+              className='px-5 py-2 text-lg font-medium text-white transition-all rounded-lg sm:px-6 sm:py-3 sm:text-xl md:px-8 md:py-4 md:text-2xl bg-emerald-600 hover:bg-emerald-500' 
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -169,19 +135,25 @@ export function Main() {
           } 
         }}
       >
-        <div className="relative w-full max-w-lg">
+        <div className="relative w-full h-[55vh] overflow-hidden rounded-lg mt-10">
           <motion.div 
-            className="absolute opacity-75 -inset-4 bg-emerald-400/20 rounded-xl blur-lg"
+            className="absolute opacity-75 -inset-4 rounded-xl blur-lg"
             animate={{
               opacity: [0.5, 0.75, 0.5],
               transition: { duration: 4, repeat: Infinity, ease: "easeInOut" }
             }}
           />
-          <img 
-            src={Paisaje}  
-            alt="Landscape image" 
-            className="relative w-full h-auto max-h-[70vh] object-cover rounded-lg shadow-2xl border border-emerald-400/10"
-          />
+          {/* Video con dimensiones completas */}
+          <video 
+            autoPlay 
+            loop 
+            muted 
+            playsInline
+            className="relative object-contain w-full h-full"
+          >
+            <source src={video} type="video/mp4" />
+            Tu navegador no soporta el elemento de video.
+          </video>
         </div>
       </motion.section>
     </main>
