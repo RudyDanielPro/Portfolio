@@ -30,7 +30,7 @@ export function Main() {
   const [displayedText, setDisplayedText] = useState("");
   const [isTyping, setIsTyping] = useState(true);
 
-  // Función para hacer scroll suave a una sección (igual que en Nav_Var)
+ 
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -118,7 +118,7 @@ export function Main() {
               Download CV
             </motion.button>
           </Link>
-          {/* Botón de contacto modificado para usar scrollToSection igual que en Nav_Var */}
+          
           <motion.button 
             onClick={() => scrollToSection('contact')}
             className='px-5 py-2 text-lg font-medium text-white transition-all rounded-lg sm:px-6 sm:py-3 sm:text-xl md:px-8 md:py-4 md:text-2xl bg-emerald-600 hover:bg-emerald-500' 
