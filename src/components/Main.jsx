@@ -30,7 +30,6 @@ export function Main() {
   const [displayedText, setDisplayedText] = useState("");
   const [isTyping, setIsTyping] = useState(true);
 
- 
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -67,9 +66,10 @@ export function Main() {
   }, [displayedText, isTyping, currentTextIndex]);
 
   return (
-    <main className='relative flex flex-col items-center w-full mt-10 min-h-max md:flex-row'>
+    <main className='relative flex flex-col items-center w-full md:flex-row'>
+      {/* Sección de contenido */}
       <motion.section 
-        className='relative z-10 w-full md:w-2/3'
+        className='relative z-20 w-full p-6 md:w-2/3 md:p-8'
         initial="hidden"
         animate="visible"
         variants={staggerContainer}
@@ -130,8 +130,9 @@ export function Main() {
         </motion.div>
       </motion.section>
 
+      {/* Sección del video - Modificada para ocupar todo el espacio disponible */}
       <motion.section 
-        className="relative z-10 justify-center hidden w-full pr-0 mt-8 md:flex md:w-1/3 md:pr-8 md:mt-0"
+        className="relative z-10 flex justify-center w-full md:w-1/3"
         initial={{ opacity: 0, x: 20 }}
         animate={{ 
           opacity: 1, 
@@ -143,11 +144,11 @@ export function Main() {
           } 
         }}
       >
-        <div className="relative w-full h-[55vh] overflow-hidden rounded-lg mt-10">
+        <div className="relative w-full h-full max-w-2xl overflow-hidden rounded-lg">
           <motion.div 
-            className="absolute opacity-75 -inset-4 rounded-xl blur-lg"
+            className="absolute inset-0 rounded-xl bg-emerald-500/20 blur-xl"
             animate={{
-              opacity: [0.5, 0.75, 0.5],
+              opacity: [0.3, 0.6, 0.3],
               transition: { duration: 4, repeat: Infinity, ease: "easeInOut" }
             }}
           />
@@ -156,7 +157,7 @@ export function Main() {
             loop 
             muted 
             playsInline
-            className="relative object-contain w-full h-full"
+            className="relative object-cover w-full h-full max-h-[70vh] rounded-lg"
           >
             <source src={video} type="video/mp4" />
             Tu navegador no soporta el elemento de video.

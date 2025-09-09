@@ -52,8 +52,7 @@ export function Home() {
       <div className="sticky top-0 z-50">
           <Nav_Var />
         </div>
-      
-      {/* Contenedor principal sin position:relative para que el scroll funcione correctamente */}
+
       <div className="relative z-10 max-w-full px-4 mx-auto sm:px-5 md:px-6 lg:px-8 xl:px-10">
         <div className="flex flex-col mt-4 space-y-16 md:mt-6 md:space-y-20 lg:mt-8 lg:space-y-24">
           <div id="home">
@@ -73,8 +72,6 @@ export function Home() {
           </div>
         </div>
       </div>
-      
-      {/* Footer */}
       <div className="relative z-20 mt-10 md:mt-12 lg:mt-16">
         <Footer />
       </div>
