@@ -30,7 +30,6 @@ export function Nav_Var() {
     <nav className={`sticky top-0 z-50 flex flex-row items-center justify-between transition-all duration-300 w-full py-3 px-4 ${
       isScrolled ? 'backdrop-blur-md' : 'backdrop-blur-sm'
     }`}>
-      {/* Logo/Brand */}
       <div 
         className="flex flex-row items-center gap-3 text-2xl font-bold text-white cursor-pointer hover:text-emerald-400 md:text-3xl"
         onClick={() => scrollToSection('home')}
@@ -40,7 +39,7 @@ export function Nav_Var() {
         <span className="sm:hidden">Portfolio</span>
       </div>
       
-      {/* Desktop Menu Items */}
+      {/* Menu PC */}
       <div className="items-center justify-end flex-1 hidden gap-8 md:flex lg:gap-10">            
         <motion.div whileHover={{ scale: 1.05 }}>
           <div 
@@ -79,7 +78,7 @@ export function Nav_Var() {
         </motion.div>
       </div>
 
-      {/* Mobile Menu Button */}
+      
       <button 
         className="z-50 text-white md:hidden focus:outline-none"
         onClick={toggleMenu}
@@ -88,12 +87,12 @@ export function Nav_Var() {
         {isMenuOpen ? <FaTimes size={28} /> : <FaBars size={28} />}
       </button>
 
-      {/* Mobile Menu Overlay */}
+      
       {isMenuOpen && (
         <div className="fixed inset-0 z-40 bg-black/50 md:hidden" onClick={toggleMenu} />
       )}
 
-      {/* Mobile Menu */}
+      {/* Menu Telefono */}
       {isMenuOpen && (
         <motion.div 
           className="fixed left-0 z-50 w-screen border-t shadow-lg top-full bg-slate-900 border-slate-700/50 md:hidden"

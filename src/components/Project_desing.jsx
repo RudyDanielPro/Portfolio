@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { FiExternalLink, FiGithub } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 import bibliographicManagerImg from '../assets/Bibliographic Manager.png';

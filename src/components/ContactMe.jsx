@@ -97,7 +97,7 @@ export function ContactMe() {
                     </div>
                 </div>
 
-                {/* Versión desktop */}
+                {/* Versión PC */}
                 <div className="hidden md:block">
                     <div className="mb-5 text-left">
                         <div className="flex items-center mb-2">

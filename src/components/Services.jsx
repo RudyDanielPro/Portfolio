@@ -11,7 +11,6 @@ export function Services() {
             <h1 className="w-full mb-8 text-2xl font-bold md:text-3xl text-emerald-400">Services</h1>
             
             <div className="grid w-full h-full grid-cols-1 gap-6 sm:grid-cols-2">
-                {/* Web Development */}
                 <div className="flex flex-col p-6 transition-all duration-300 bg-slate-950 hover:bg-emerald-900 rounded-xl group min-h-[200px]">
                     <div className="flex items-center gap-4 mb-4">
                         <FaCode className="w-6 h-6 text-emerald-400 group-hover:text-white" />
@@ -24,7 +23,6 @@ export function Services() {
                     </p>
                 </div>
                 
-                {/* Web Design */}
                 <div className="flex flex-col p-6 transition-all duration-300 bg-slate-950 hover:bg-emerald-900 rounded-xl group min-h-[200px]">
                     <div className="flex items-center gap-4 mb-4">
                         <FaPalette className="w-6 h-6 text-emerald-400 group-hover:text-white" />
@@ -37,7 +35,6 @@ export function Services() {
                     </p>
                 </div>
                 
-                {/* Software Development */}
                 <div className="flex flex-col p-6 transition-all duration-300 bg-slate-950 hover:bg-emerald-900 rounded-xl group min-h-[200px]">
                     <div className="flex items-center gap-4 mb-4">
                         <FaLaptopCode className="w-6 h-6 text-emerald-400 group-hover:text-white" />
@@ -50,7 +47,6 @@ export function Services() {
                     </p>
                 </div>
                 
-                {/* Graphic Design */}
                 <div className="flex flex-col p-6 transition-all duration-300 bg-slate-950 hover:bg-emerald-900 rounded-xl group min-h-[200px]">
                     <div className="flex items-center gap-4 mb-4">
                         <FaPaintBrush className="w-6 h-6 text-emerald-400 group-hover:text-white" />

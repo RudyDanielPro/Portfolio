@@ -143,7 +143,6 @@ export function Main() {
               transition: { duration: 4, repeat: Infinity, ease: "easeInOut" }
             }}
           />
-          {/* Video con dimensiones completas */}
           <video 
             autoPlay 
             loop 

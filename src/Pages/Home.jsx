@@ -10,7 +10,6 @@ import { Footer } from '../components/Footer';
 export function Home() {
   return (
     <div className="relative min-h-screen">
-      {/* Fondo fijo mejorado con mejor contraste */}
       <div className="fixed inset-0 z-0">
         <motion.div
           className="absolute inset-0"
@@ -54,7 +53,6 @@ export function Home() {
           <Nav_Var />
         </div>
       <div className="relative z-10 max-w-full px-4 mx-auto sm:px-5 md:px-6 lg:px-8 xl:px-10">
-        {/* Contenido con mejor espaciado y contraste */}
         <div className="flex flex-col mt-4 space-y-16 md:mt-6 md:space-y-20 lg:mt-8 lg:space-y-24">
           <div id="home">
             <Main />
