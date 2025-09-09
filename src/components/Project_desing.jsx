@@ -29,7 +29,7 @@ export function Project_desing() {
             description: "This portfolio website showcases the work of a full stack developer.",
             image: portfolioImg,
             githubLink: "https://github.com/RudyDanielPro/Portfolio",
-            projectLink: "https://portfolio-n71a.onrender.com/"
+            projectLink: "https://v0-portfolio-rho-one-22.vercel.app/"
         },
         {
             id: 4,

@@ -93,7 +93,7 @@ export function ContactMe() {
                             <FaGlobe className="mr-2 text-lg text-emerald-400 sm:text-xl" />
                             <h3 className="text-base font-medium text-emerald-400 sm:text-lg">Website</h3>
                         </div>
-                        <p className="text-sm font-normal text-white break-words ml-7 sm:ml-8 sm:text-base">https://portfolio-n71a.ornender.com</p>
+                        <p className="text-sm font-normal text-white break-words ml-7 sm:ml-8 sm:text-base">https://v0-portfolio-rho-one-22.vercel.app/</p>
                     </div>
                 </div>
 
