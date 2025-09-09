@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import video from "../assets/Foto.mp4";
+import video from "../assets/foto.mp4";
 
 export function Main() {
   const fadeIn = {
