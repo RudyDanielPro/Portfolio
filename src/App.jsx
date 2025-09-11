@@ -6,11 +6,11 @@ export function App() {
   return (
     <Router>
       <div className="relative min-h-screen bg-gray-800">
+        <Home />
+
         
-              <Home />
-           
-         
-       
+
+
       </div>
     </Router>
   );

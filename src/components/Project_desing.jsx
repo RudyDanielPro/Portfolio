@@ -43,7 +43,7 @@ export function Project_desing() {
 
     return (
         <section className="flex flex-col items-start w-full min-h-full pb-12">
-            <h1 className="mb-6 text-2xl font-bold md:mb-8 md:text-3xl text-emerald-400">Projects</h1>
+            <h1 className="mb-6 text-3xl font-bold sm:text-4xl md:text-5xl lg:text-6xl text-emerald-400">Projects</h1>
             
             <div className="grid w-full grid-cols-1 gap-4 md:grid-cols-2">
                 {projects.map((project) => (

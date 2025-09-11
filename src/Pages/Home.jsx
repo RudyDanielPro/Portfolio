@@ -49,6 +49,9 @@ export function Home() {
         </div>
       </div>
 
+
+      
+
       <div className="sticky top-0 z-50">
           <Nav_Var />
         </div>

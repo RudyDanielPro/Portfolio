@@ -60,7 +60,7 @@ export function ContactMe() {
             )}
 
             <div className="w-full mb-6 md:w-1/2 md:mb-0 md:pr-4">
-                <h1 className="mb-4 text-2xl font-bold text-left md:mb-5 md:text-3xl text-emerald-400">Contact Me</h1>
+                <h1 className="mb-4 text-3xl font-bold text-left sm:text-4xl md:text-5xl lg:text-6xl text-emerald-400">Contact Me</h1>
 
                 {/* Versión móvil */}
                 <div className="grid grid-cols-1 gap-4 mb-5 sm:grid-cols-2 md:hidden">
@@ -69,7 +69,7 @@ export function ContactMe() {
                             <FaPhone className="mr-2 text-lg text-emerald-400 sm:text-xl" />
                             <h3 className="text-base font-medium text-emerald-400 sm:text-lg">Mobile no</h3>
                         </div>
-                        <p className="text-sm font-normal text-white ml-7 sm:ml-8 sm:text-base">+33 56498546</p>
+                        <p className="text-sm font-normal text-white ml-7 sm:ml-8 sm:text-base">+53 56498546</p>
                     </div>
 
                     <div className="text-left">
@@ -134,7 +134,7 @@ export function ContactMe() {
             </div>
 
             <div className="w-full md:w-1/2">
-                <h2 className="mb-4 text-xl font-bold text-left md:mb-5 md:text-2xl text-emerald-400">Send me a message</h2>
+                <p className="text-xl font-bold text-left sm:text-4xl md:text-5xl lg:text-6xl text-emerald-400">Send me a message</p>
 
                 <form ref={form} onSubmit={sendEmail} className="w-full">
                     <div className="flex flex-col gap-4 mb-4 sm:flex-row sm:gap-4">

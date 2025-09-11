@@ -25,7 +25,7 @@ export function Main() {
     }
   };
 
-  const texts = ["Frontend Developer", "Rudy"];
+  const texts = ["Frontend Developer", "I'm Rudy,"];
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
   const [displayedText, setDisplayedText] = useState("");
   const [isTyping, setIsTyping] = useState(true);
@@ -75,19 +75,19 @@ export function Main() {
         variants={staggerContainer}
       >
         <motion.div variants={fadeIn}>
-          <h1 className='text-4xl font-bold text-white sm:text-5xl md:text-6xl lg:text-7xl'> 
-            Hi, I'm 
+          <h1 className='text-4xl font-black text-white uppercase sm:text-5xl md:text-6xl lg:text-7xl'> 
+            Hey there!,  
           </h1>
         </motion.div>
         
         <motion.div variants={fadeIn}>
           <h2 className='mt-4 text-3xl text-gray-300 sm:text-4xl md:text-5xl lg:text-6xl'>
             {" "}
-            <span className='text-emerald-400'>
+            <span className='font-mono text-emerald-400'>
               {displayedText}
               <motion.span 
                 animate={{ opacity: [0, 1, 0] }}
-                transition={{ duration: 0.8, repeat: Infinity }}
+                transition={{ duration: 0.4, repeat: Infinity }}
                 className="inline-block ml-1"
               >
                 |

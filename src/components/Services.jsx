@@ -8,7 +8,7 @@ import {
 export function Services() {
     return(
         <section className="flex flex-col items-start w-full">
-            <h1 className="w-full mb-8 text-2xl font-bold md:text-3xl text-emerald-400">Services</h1>
+            <h1 className="w-full mb-8 text-3xl font-bold sm:text-4xl md:text-5xl lg:text-6xl text-emerald-400">Services</h1>
             
             <div className="grid w-full h-full grid-cols-1 gap-6 sm:grid-cols-2">
                 <div className="flex flex-col p-6 transition-all duration-300 bg-slate-950 hover:bg-emerald-900 rounded-xl group min-h-[200px]">
