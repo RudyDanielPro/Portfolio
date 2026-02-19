@@ -20,7 +20,7 @@ const ContactSection = () => {
     e.preventDefault();
     setStatus("sending");
     try {
-      const response = await fetch("http://localhost:9090/api/emails/enviar", {
+      const response = await fetch("https://gmail-services.onrender.com/api/emails/enviar", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
