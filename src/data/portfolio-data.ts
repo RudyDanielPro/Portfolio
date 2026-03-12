@@ -39,38 +39,58 @@ export const skills = {
 export const projects = [
   {
     id: 1,
-    titleKey: "projects.p1.title",
-    descKey: "projects.p1.desc",
+    titleKey: "Baby clothing store",
+    descKey: "E-commerce platform designed for the marketing of baby items, baby clothing, accessories, and personal care products. The project focuses on providing a smooth user experience, prioritizing ease of navigation and a visually cute but professional design, in line with the children's market niche.",
     techs: ["React", "Spring Boot", "PostgreSQL", "TailwindCSS"],
-    demo: "#",
-    code: "#",
+    demo: "https://canastilla-de-anyi-fashion.carshop.cu/",
+    code: "https://github.com/RudyDanielPro/canastilla-de-anyi-fashion",
     color: "from-accent to-secondary",
+    images: [
+      "https://res.cloudinary.com/dbo4vt3qa/image/upload/v1773285001/Captura_de_pantalla_2026-03-11_230043_ukvlhm.png",
+      "https://res.cloudinary.com/dbo4vt3qa/image/upload/v1773284996/Captura_de_pantalla_2026-03-11_230059_bbgmbu.png",
+      "https://res.cloudinary.com/dbo4vt3qa/image/upload/v1773284984/Captura_de_pantalla_2026-03-11_230128_zuswml.png"
+    ]
   },
   {
     id: 2,
-    titleKey: "projects.p2.title",
+    titleKey: "Personal notes manager",
     descKey: "projects.p2.desc",
-    techs: ["React", "Java", "WebSockets", "MySQL"],
-    demo: "#",
-    code: "#",
+    techs: ["React", "Spring Boot", "PostgreSQL", "TailwindCSS"],
+    demo: "https://personal-notes-manager.carshop.cu",
+    code: "https://github.com/RudyDanielPro/personal-notes-manager",
     color: "from-secondary to-primary",
+    images: [
+      "https://res.cloudinary.com/dbo4vt3qa/image/upload/v1773286255/Captura_de_pantalla_2026-03-11_232742_amuqt8.png",
+      "https://res.cloudinary.com/dbo4vt3qa/image/upload/v1773286255/Captura_de_pantalla_2026-03-11_232649_wmkbp7.png",
+      "https://res.cloudinary.com/dbo4vt3qa/image/upload/v1773286254/Captura_de_pantalla_2026-03-11_232727_a4nxmi.png",
+      "https://res.cloudinary.com/dbo4vt3qa/image/upload/v1773286255/Captura_de_pantalla_2026-03-11_233019_nqpeiy.png"
+    ]
   },
   {
     id: 3,
     titleKey: "projects.p3.title",
     descKey: "projects.p3.desc",
-    techs: ["React", "Spring Boot", "MongoDB", "REST API"],
-    demo: "#",
-    code: "#",
+    techs: ["React", "Spring Boot", "PostgreSQL", "TailwindCSS"],
+    demo: "https://chef-zone.carshop.cu/",
+    code: "https://github.com/RudyDanielPro/ChefZone",
     color: "from-primary to-accent",
+    images: [
+      "https://res.cloudinary.com/dbo4vt3qa/image/upload/v1773290365/Captura_de_pantalla_2026-03-12_003508_mhyjqu.png",
+      "https://res.cloudinary.com/dbo4vt3qa/image/upload/v1773290360/Captura_de_pantalla_2026-03-12_003529_f7orni.png",
+      "https://res.cloudinary.com/dbo4vt3qa/image/upload/v1773290390/Captura_de_pantalla_2026-03-12_003628_vmaflb.png",
+      "https://res.cloudinary.com/dbo4vt3qa/image/upload/v1773290409/Captura_de_pantalla_2026-03-12_003650_ajqzfh.png"
+    ]
   },
   {
     id: 4,
     titleKey: "projects.p4.title",
     descKey: "projects.p4.desc",
-    techs: ["React", "TailwindCSS", "Chart.js", "API REST"],
-    demo: "#",
-    code: "#",
+    techs: ["React", "Spring Boot", "TailwindCSS"],
+    demo: "https://danpro.carshop.cu",
+    code: "https://github.com/RudyDanielPro/Portfolio",
     color: "from-accent to-primary",
+    images: [
+      "https://res.cloudinary.com/dbo4vt3qa/image/upload/v1773291590/Captura_de_pantalla_2026-03-12_005913_xxceov.png"
+    ]
   },
 ];
