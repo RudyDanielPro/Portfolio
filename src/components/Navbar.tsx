@@ -24,9 +24,8 @@ const Navbar = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-card/95 backdrop-blur-md shadow-card" : "bg-transparent"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "bg-card/95 backdrop-blur-md shadow-card" : "bg-transparent"
+        }`}
     >
       <nav className="container mx-auto flex items-center justify-between px-4 h-[var(--nav-height)]">
         <button
@@ -91,7 +90,7 @@ const Navbar = () => {
                 </li>
               ))}
               <li>
-                <a href="#" className="flex items-center gap-2 px-4 py-3 rounded-lg bg-accent text-accent-foreground font-semibold mt-2">
+                <a href="https://drive.google.com/uc?export=download&id=10eRDJfWTQW1bciOho-RCT7Bw3-lyCRXE" className="flex items-center gap-2 px-4 py-3 rounded-lg bg-accent text-accent-foreground font-semibold mt-2" >
                   <Download className="w-4 h-4" />
                   {t("nav.cv")}
                 </a>
