@@ -93,4 +93,17 @@ export const projects = [
       "https://res.cloudinary.com/dbo4vt3qa/image/upload/v1773291590/Captura_de_pantalla_2026-03-12_005913_xxceov.png"
     ]
   },
+  {
+    id: 5,
+    titleKey: "projects.p5.title",
+    descKey: "projects.p5.desc",
+    techs: ["React", "Spring Boot", "TailwindCSS"],
+    demo: "https://job-manager.carshop.cu/",
+    code: "https://github.com/RudyDanielPro/JobManager",
+    color: "from-accent to-primary",
+    images: [
+      "/src/assets/img 1.png",
+      "/src/assets/img 2.png"
+    ]
+  },
 ];

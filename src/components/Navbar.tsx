@@ -29,9 +29,15 @@ const Navbar = () => {
       }`}
     >
       <nav className="container mx-auto flex items-center justify-between px-4 h-[var(--nav-height)]">
-        <button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="font-bold text-lg text-primary tracking-tight">
-          {personalData.name.split(" ")[0]}
-          <span className="text-accent">.</span>
+        <button
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          className="font-bold text-lg tracking-tight flex items-center gap-2 px-3 py-1 rounded-lg bg-gradient-to-r from-accent to-primary text-white shadow-lg hover:from-primary hover:to-accent transition-colors duration-200"
+        >
+          <Globe className="w-6 h-6 text-white drop-shadow-md" />
+          <span>
+            {personalData.name.split(" ")[0]}
+            <span className="text-accent">.</span>
+          </span>
         </button>
 
         {/* Desktop */}
@@ -50,7 +56,7 @@ const Navbar = () => {
             <Globe className="w-4 h-4" />
             {lang === "es" ? "EN" : "ES"}
           </button>
-          <a href="#" className="inline-flex items-center gap-1.5 rounded-lg bg-accent px-4 py-2 text-sm font-semibold text-accent-foreground hover:opacity-90 transition-opacity" style={{ boxShadow: "var(--shadow-button)" }}>
+          <a href="https://drive.google.com/uc?export=download&id=10eRDJfWTQW1bciOho-RCT7Bw3-lyCRXE" className="inline-flex items-center gap-1.5 rounded-lg bg-accent px-4 py-2 text-sm font-semibold text-accent-foreground hover:opacity-90 transition-opacity" style={{ boxShadow: "var(--shadow-button)" }}>
             <Download className="w-4 h-4" />
             {t("nav.cv")}
           </a>
